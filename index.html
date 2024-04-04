@@ -5,32 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
+        h1, h2, h3 {
+            margin: 20px 0;
         }
         h1 {
-            color: #333;
+            color: #007bff;
+	    text-align: center
+        }
+        h2 {
+            color: #0056b3;
+	    text-align: center
+        }
+	h3 {
+            color: #0056b3;
+	    text-align: center;
+        }
+	h4 {
+            color: #0056b3;
+	    text-align: center;
         }
         a {
             display: inline-block;
             margin: 10px;
-            padding: 10px;
+            padding: 10px 15px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
+        a:hover, a:focus {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        /* Main content styling */
+        p, ul {
+            text-align: center;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: start; 
+    min-height: 100vh; 
+}
+
+.image-container {
+    width: 50%; 
+    display: flex;
+    justify-content: center; 
+    overflow: hidden; 
+    margin-top: 20vh; 
+}
+
+.text-content {
+    width: 50%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+img {
+    max-width: 100%; 
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .image-container, .text-content {
+        width: 100%;
+    }
+    .image-container {
+        margin-top: 5vh; 
+    }
+    img {
+        max-height: 40vh; 
+    }
+}
+
+
     </style>
 </head>
 <body>
-    <h1>Welcome to My Hdip Computer Science Final Project Page</h1>
+    <div class="container">
+        <div class="image-container">
+            <img src="routes.png" alt="routes">
+        </div>
+        <div class="text-content">
+            <!-- Your text content here -->
+            <h1>Welcome to My Hdip Computer Science Final Project Page</h1>
     <h3>My Name is David Cotter and I am doing a work based web application called XMDM</h3>
-    <p>Here are my links:</p>
+    <h4>Here are my links:</h4>
     <a href="https://trello.com/invite/b/t5xAN0vi/ATTIda042a8b5c9771267d41a1b0043a58cb9F3656AA/final-project-v2" target="_blank">My Trello</a>
-    <a href="" target="_blank">My YouTube Video(not yet active)</a>
-    <a href="https://drive.google.com/file/d/1XdHW1PF-qtMx-BP4YcKcJhGsvNipXvqo/view?usp=sharing" target="_blank">Final report</a>
+    <a href="" target="_blank">My YouTube Video (not yet active)</a>
+    <a href="https://drive.google.com/file/d/1XdHW1PF-qtMx-BP4YcKcJhGsvNipXvqo/view?usp=sharing" target="_blank">Final Report</a>
     <a href="" target="_blank">Presentation Slides (not yet active)</a>
+    <h2>XMDM – Web Application for Managing Parameters in Other Applications</h2>
+    <p>Its main purpose is to store data (mainly configuration or parameters which are changed by the user), provide validation, and keep track of changes.</p>
+    <p>The aim of my application is to create a REST API application using Scala with the Play Framework.</p>
+    <p>Users can log in to call the routes to retrieve data, input, update, and delete data as necessary.</p>
+    <h3>Technologies used during the development of the project:</h3>
+    <ul>
+        <li>Scala</li>
+        <li>Play Framework</li>
+        <li>Trello</li>
+        <li>Docker</li>
+        <li>GitHub</li>
+        <li>PostgreSQL</li>
+    </ul>
+	</div>
+        <div class="image-container">
+            <img src="role.png" alt="login details">
+        </div>
+        
+    </div>
 </body>
 </html>
